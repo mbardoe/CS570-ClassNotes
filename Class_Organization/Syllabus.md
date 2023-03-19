@@ -1,3 +1,4 @@
+[comment]: render 
 # CS570 Syllabus
 
 ## Textbook
