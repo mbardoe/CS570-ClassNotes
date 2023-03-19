@@ -1,8 +1,18 @@
 # CS570 Syllabus
 
-# Textbook
+## Textbook
+
+There is no textbook for this course, but there is a GitHub repository that has many links and some pdfs that may be 
+helpful. https://github.com/mbardoe/CS570-ClassNotes
 
 
+## Contact
+
+## Office
+
+## Extra-help
+
+## Learning Management System
 
 
 ## Grading
