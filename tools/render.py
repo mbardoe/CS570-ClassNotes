@@ -10,7 +10,7 @@ class Renderer:
 
     def render(self):
         os.chdir("..")
-        print(os.getcwd())
+        print(f"Current Top Directory: {os.getcwd()}")
         #######################
         # get list of all folders in this directory
         ######################
@@ -20,15 +20,15 @@ class Renderer:
             if 'pdf' in [x.name for x in os.scandir(directory)]:
                 pdf_direc.append(directory)
 
-        print(pdf_direc)
+        #print(pdf_direc)
         ####################
         # Go through those directories and find all the .md files and then create the pdf
         ####################
         for directory in pdf_direc:
-            print(directory)
+            print(f"Looking in this directory for md to make into pdfs: \n {directory}")
             os.chdir(directory)
             md_files = [my_file.name for my_file in os.scandir(directory) if my_file.name[-3:] == ".md"]
-            print(md_files)
+            print(f"md files found {md_files}")
             ################
             # pandoc those files
             ################
@@ -43,11 +43,21 @@ class Renderer:
         count = 0
         # Strips the newline character
         commands = [line.strip()[10:].strip() for line in Lines if line.strip()[:10] == "[comment]:"]
-        print(commands)
-        # TODO: Make the landscape command
-        if 'render' in commands:
-            call(["pandoc", "-s", direc + "/" + filename, "-o", direc + "/pdf/" + filename[:-3] + '.pdf'])
+        print(f"In the file {filename} we found the commands: {commands}")
 
+        final_call=[]
+        if 'render' in commands:
+            if 'landscape' in commands:
+                final_call = ["pandoc", "-s", direc + "/" + filename,
+                              '-V', 'geometry:landscape',
+                              "-o", direc + "/pdf/" + filename[:-3] + '.pdf']
+
+            else:
+                final_call=["pandoc", "-s", direc + "/" + filename, "-o", direc + "/pdf/" + filename[:-3] + '.pdf']
+
+        if len(final_call)>0:
+            #print (final_call)
+            call(final_call)
 
 if __name__ == '__main__':
     # Renderer.render()

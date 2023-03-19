@@ -1,6 +1,5 @@
 [comment]: render 
-
-
+[comment]: landscape
 
 # Course Calendar
 
@@ -13,7 +12,7 @@
 |  4   | Using Encoders and Gyros to update robot position |                                                                                |                                                                                                                |                                                                                             |
 |  5   | Subsystems                                        |                                                                                |                                                                                                                | **Midterm**                                                                                 |
 |  6   | Unit Testing                                      |                                                                                |                                                                                                                | **NO CLASS: Long Weekend**                                                                  |
-|  7   | Command Based Robot                               | Test 2                                                                         | Introduction to Command Based Roobt                                                                            | Project 2: Work time                                                                        |
+|  7   | Command Based Robot                               | Test 2                                                                         | Introduction to Command Based Robot                                                                            | Project 2: Work time                                                                        |
 |  8   | Autonomous Command Project 2  and PID Controllers | Project 2 Work time                                                            |                                                                                                                |                                                                                             |
 |  9   | PID Controllers/Final Project                     |                                                                                |                                                                                                                |                                                                                             |
 |  10  | Final Project                                     |                                                                                |                                                                                                                | **NO CLASS: Prize Day**                                                                     |
