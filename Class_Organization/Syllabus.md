@@ -1,4 +1,5 @@
 [comment]: render 
+
 # CS570 Syllabus
 
 ## Textbook
@@ -9,12 +10,32 @@ helpful. https://github.com/mbardoe/CS570-ClassNotes
 
 ## Contact
 
+email: mbardoe@choate.edu
+
+Office Phone: 203-697-2328
+
 ## Office
+
+My office is in 208 of Lanphier. I am in Lanphier much of the day, and I try to be in Lanphier for every conference block.
 
 ## Extra-help
 
+I am on duty every Tuesday night, and generally one other random weeknight. Ask for good times to meet during study hours.
+I am also available A, B, and G blocks (except G block on Thursday).
+
 ## Learning Management System
 
+We will use both Canvas and probably GitHub Classroom. You should have received an invitation to the Canvas course already, 
+and the GitHub classroom will come once we are sure that we all have accounts.
+
+## Class Goals
+
+* Introduce students to git and GitHub as a tool to develop software
+* Introduce students to the ideas of pose and trajectory as used in robotics
+* Introduce students to the ```wpilib```  and ```robotpy``` libraries to help them program frc robots
+* Increase students facility with python and object-oriented programming
+* Introduce students to the process of unit testing software
+* Increase students facility on working in teams to develop software
 
 ## Grading
 

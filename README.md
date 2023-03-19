@@ -28,7 +28,7 @@ There are a variety of folders in the repo.
 * 3/19/2023 - Built the Renderer tool to help create the pdfs. 
     * Made updates to Handout_1
     * Made updates to Day_1 class notes
-    * Made updates to Syllabus
+    * Finished Syllabus
     * Made updates to Course_Calendar
     * Made updates to HW_1
 
