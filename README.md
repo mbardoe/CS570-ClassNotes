@@ -24,8 +24,13 @@ There are a variety of folders in the repo.
 
 ## Changelog
 
-3/18/2023 - Started the repository. Built out the 
-
+* 3/18/2023 - Started the repository. Built out the main folders. 
+* 3/19/2023 - Built the Renderer tool to help create the pdfs. 
+    * Made updates to Handout_1
+    * Made updates to Day_1 class notes
+    * Made updates to Syllabus
+    * Made updates to Course_Calendar
+    * Made updates to HW_1
 
 ## References
 
