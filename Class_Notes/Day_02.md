@@ -65,7 +65,7 @@ to get set. When you make a class, you will most often need to make this method 
 
 #### ```self``` keyword
 
-The ```self``` keyword is a way for python to refer to the an object before it actually exists. In a class, we don't know 
+The ```self``` keyword is a way for python to refer to an object before it actually exists. In a class, we don't know 
 the variable name for an object because it doesn't exist yet. We use ```self``` to indicate the object that we will make 
 later. Every property needs to be made using the ```self``` keyword. This makes that property have scope (it will continue to 
 be available throughout the all the methods of the class.)
@@ -79,12 +79,12 @@ Choose one of these tasks depending on your level:
 
 * (Beginner) Open a new project and make a class file that represents a motor. Call the class ```Motor```. The motor has a 
 property called ```speed```. When an object is made set the speed property to be 0.5. Write a method called ```set_speed```
-that takes a number in an sets the speed property to that number. Then write a method called ```speed_up```
+that takes a number in and sets the speed property to that number. Then write a method called ```speed_up```
 and another called ```slow_down```. The first method makes the motor go twice as fast, and the other one makes it go half as fast.
 
 * (Intermediate) Create two classes. One like the one that is described above and another called a ```MotorControllerGroup```. The
-```MotorControllerGroup``` should be able to have a number of motors associated to it. The MotorControllerGroup should have the 
-the ability to be made with a list of motors, and you should be able use an ```add_motor``` method that takes in a motor and 
+```MotorControllerGroup``` should be able to have a number of motors associated to it. The MotorControllerGroup should have  
+the ability to be made with a list of motors, and you should be able to use an ```add_motor``` method that takes in a motor and 
 adds it to the list of motors the controller group manages. The MotorControllerGroup needs to
 have a method called ```set_speed``` that takes a number and sets the speed of all the motors it controls to that speed.
 
@@ -116,7 +116,7 @@ green check mark then adding a message about what you did and hitting the button
 
 Sometimes you want to make changes free of other's changes. You want to work on your own area, or you want to keep a version
 of what you have done intact without. This is most easily done by making a new branch. Branches can be made using the PyCharm 
-Git menu. Branches allow you have several versions of the same code on your machine. When you checkout a new branch Git 
+Git menu. Branches allow you have several versions of the same code on your machine. When you check out a new branch Git 
 will update the tracked files to be in alignment with the most recent version of that branch.
 
 ##### Make commits in that branch
@@ -140,9 +140,15 @@ Cloning is a way of copying the project repository on to your own device.
 all the completed changes.
 * **commit** - A step in the completion of the project. This is a moment in the development of your project where you
 have completed a significant step (sort of like saving).
-* **pull-request** - An annoucement that an updated version of the code has been completed and needs to be incorporated
+* **pull-request** - An announcement that an updated version of the code has been completed and needs to be incorporated
 into the main branch.
 * **clone** - making a copy of a remote repository on your own computer.
 
 #### Practice
 
+1. Make a new project and clone the repo at: https://github.com/CS570-2022/Text_Integrator_Test
+2. Create a new branch using your name
+3. Create a file using your name and use the markdown ending, ".md" for the name. So make a file called "Jane_Doe.md"
+4. In that file write what you like about robotics, and sign your name, and add a few line spaces at the end of the file.
+5. Commit that change
+6. Make a pull-request to the main branch.
