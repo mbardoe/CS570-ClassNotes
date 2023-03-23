@@ -71,9 +71,21 @@ to some previous commit that you had in that branch. This can be done with the c
 git reset current~2 # this will take your code back two commits.
 ```
 
-You can also do it in PyCharm by going to the Git menu and first choosing Show GitLog. Then find the code for the commit 
-that you would like to return to. 
+You can also do it in PyCharm by going to the Git menu and first choosing ```Show Git Log```. Then find the code for the commit 
+that you would like to return to. Control click on the commit that you would like to revert to, and choose 
+```Reset Current Branch to Here...```. You will be given a few options. Read through them, and pick the best one for you.
+
 
 #### Seeing the network of branches
 
+```Show Git Log``` also gives a sense of the ways in which the branches are working, and can be useful to understanding
+how progress is going on the project.
+
+
 #### Seeing your progress
+
+Another way to see progress is by looking at the differences between files. 
+
+#### Looking at commits on GitHub
+
+Reading commits on GitHub can make 
