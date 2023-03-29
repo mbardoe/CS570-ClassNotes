@@ -87,6 +87,3 @@ how progress is going on the project.
 
 Another way to see progress is by looking at the differences between files. 
 
-#### Looking at commits on GitHub
-
-Reading commits on GitHub can make 
