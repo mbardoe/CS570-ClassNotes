@@ -1,4 +1,4 @@
-[comment]: render 
+
 # Day 1
 
 ## Goals
@@ -64,3 +64,4 @@ Tonight's homework is to complete a survey about your programming background.
 
 https://forms.gle/PpT5mgXRdZRBVhGG9
 
+In what ways could you 
