@@ -2,7 +2,7 @@
 # Day 7 First ROMI Project
 ## A ROMI line follower
 
-### Prject Overview
+### Project Overview
 
 In this project we are looking to make a ROMI that can be teleoperated, but also have an autonomous routine that follows 
 an electrical tape line. We will use VEX line follower sensors, and 2 of the ROMI's GPIO (General Purpose Input/Output) pins. 
@@ -23,7 +23,7 @@ the setup of the ROMI.
 After you have made the ROMI writable scroll down to find the settings of the GPIO interfaces. Change the second of these
 to DIO so that you can use both line sensors. 
 
-![Change settings](img/romi-ui-io-config.jpg)
+![Change settings](../img/romi-ui-io-config.jpg)
 
 
 ### Tips on installing the Sensors
