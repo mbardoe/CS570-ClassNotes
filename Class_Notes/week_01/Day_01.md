@@ -1,4 +1,4 @@
-
+[comment]: render
 # Day 1
 
 ## Goals
@@ -62,6 +62,6 @@ Two ideas come together to make git and GitHub and Python work so seamlessly tog
 
 Tonight's homework is to complete a survey about your programming background. 
 
-https://forms.gle/PpT5mgXRdZRBVhGG9
+https://forms.gle/UX9AcDwW9Dz3DeYK7
 
-In what ways could you 
+

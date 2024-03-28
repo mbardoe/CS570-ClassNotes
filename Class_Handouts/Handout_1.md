@@ -1,4 +1,4 @@
-[comment:] render
+[comment]: render
 # Day 1 Handout
 
 ## Course Details
@@ -19,7 +19,7 @@ https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 
 ## Create GitHub Account
 
-https://github.com/
+https://docs.github.com/en/education/explore-the-benefits-of-teaching-and-learning-with-github-education/github-global-campus-for-students/apply-to-github-global-campus-as-a-student
 
 ## Connect your PyCharm and GitHub
 
@@ -60,10 +60,10 @@ Go to PyCharm and Start a new project called 'CS570_Day_1'
   * **commit** - a moment where your code is ready to share, and you have completed some goal
   * **branch** - a version of the code that is working on particular changes. Either because they are the changes of one person or one issue
   * **merge** - a way of bringing two branches together
+  * **pull request** - a way of asking for your changes to be merged into the main branch when working with a team
+  * **push** - a way of sending your changes to online repository
 
 ## Homework
 
-Tonight's homework is to complete a survey about your programming background. 
 
-https://forms.gle/PpT5mgXRdZRBVhGG9
 

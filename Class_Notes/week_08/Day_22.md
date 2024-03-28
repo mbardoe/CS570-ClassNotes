@@ -156,8 +156,7 @@ We will add a decorator to the top...
 @pytest.mark.parametrize(('left_Distance', 'right_Distance', 'output'), (
         (2, 3, 2.5),
         (10, 20, 15),
-        (-3, 3, 0)
-), )
+        (-3, 3, 0)) )
 def test_averageDistanceMeter(drivetrain: Drivetrain, monkeypatch: MonkeyPatch, left_Distance, right_Distance,
                               output) -> None:
     # Setup

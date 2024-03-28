@@ -1,6 +1,6 @@
 [comment]: render
 # Day 06 CS570
-## Starting to program the ROMI
+## Starting to program a Robot
 
 ### Starting to code a Robot
 

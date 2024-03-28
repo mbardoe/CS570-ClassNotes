@@ -53,8 +53,9 @@ class Renderer:
                               "-o", directory + "/pdf/" + filename[:-3] + '.pdf']
 
             else:
-                final_call = ["pandoc", "-s", directory + "/" + filename, "-o",
-                              directory + "/pdf/" + filename[:-3] + '.pdf']
+                final_call = ["pandoc", "-s", directory + "/" + filename,
+                              '-V', "geometry:margin = .75 in",
+                              "-o", directory + "/pdf/" + filename[:-3] + '.pdf']
 
         if len(final_call) > 0:
             # print (final_call)

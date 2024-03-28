@@ -1,11 +1,36 @@
 [comment]: render
 # Day 05
-## Subclassing, Libraries and Setting up to program ROMI's
+
+## Merging branches
+
+In the natural development of a project, it is often the case that we will have multiple branches of development.
+These branches are often created to work on different features of a project. When the features are complete, we will
+want to merge the branches back together. This is done with a **merge**.
+
+### Merging
+
+Merging is the process of taking the changes that have been made in one branch and applying them to another branch.
+This is done with the command ```git merge```. The command is used like this:
+
+For instance, if we have a branch called ```dev``` and we want to merge it into the ```main``` branch. The
+first thing would be to commit our changes into the ```dev``` branch. Then we would do this:
+
+```bash
+git checkout main
+git merge dev
+```
+
+If there are no conflicts, then the changes will be applied to the main branch. If there are conflicts, then we will
+need to resolve them. This is done by opening the files that have conflicts and choosing which changes to keep.
+
+
+## Subclassing and Libraries 
+
 ### Subclasses
 
-One of the big ideas of Object Oriented Programming is **subclasses**. Subclasses make it possible to reuse ideas and build 
+One of the big ideas of Object-Oriented Programming is **subclasses**. Subclasses make it possible to reuse ideas and build 
 upon ideas in a way that makes programming way more efficient. Probably the best example of this is Minecraft. In Minecraft
-there are various ideas that are all similiar to each other but have a lot of commonality too. There are bunches of different
+there are various ideas that are all similar to each other but have a lot of commonality too. There are bunches of different
 blocks, and there a bunch of different animals. To get all of these different things to be programmed you might think that 
 there is a lot of copying of the programs that represent these different objects, but there isn't. The programmers use a kind
 of  taxonomic system that allows programs to share the same code when they need to, and have specialized code when they need to
@@ -68,44 +93,17 @@ that is called an **API**, or **Application Programming Interface**. We use libr
 **WPILib**. WPILib contains the most general grouping of libraries that allows an FRC robot to function. **Robotpy** is 
 simply a python version of the most common FRC robot libraries so that we can utilize the WPILib framework.
 
-### Installing Libraries
 
-Libraries are installed fairly easily in python now. There is a service that helps keep track of the latest versions of 
-libraries and a program for python libraries called ```pip``` that helps install them. 
-
-Let's install some libraries... Start a new project called **First_ROMI**. Then go to the *View Menu > Tool Windows > Terminal*.
-Terminal is a place where you can give commands to the computer. In PyCharm, each project is contained within what is called 
-a *Virtual Environment* which means that libraries are only accessible within that particular project. This is helpful because
-sometimes libraries have overlaps and interactions which are not good, and this allows you to control what libraries are 
-part of any python project you are making. 
-
-In terminal do the following commands one at a time:
-
-```commandline
-pip install robotpy==2022.4.8
-```
-
-```commandline
-pip install robotpy'[commands2,sim]'
-```
-
-```commandline
-pip install robotpy-romi
-```
-
-Once this is done you have the code on your computer necessary to build our first ROMI robot code. We will start that 
-next class...
 
 ### Homework
 
-For homework let's practice subclasses. Use GitHub classroom to get a repository named ```subclassing-2023```, 
-https://classroom.github.com/a/w6pDYthm. In this 
+For homework let's practice subclasses.  In this 
 repository make two files. One named ```baserobot.py```. That file describes a class ```BaseRobot``` that needs to have 
 the following methods.
 
 * ```__init__```: The constructor should take in two numbers and set them to be the self.x and self.y of the Robot. 
 * ```move```: Move takes in two numbers in increases that x and y coordinates of the robot by those numbers
-* ```beep```: Beep prints the word **beep** to the console.
+* ```beep```: Beep prints the word **Beep** to the console.
 * ```__str__```: returns a string that says the position of the robot.
 
 Then have another file, ```armbot.py```, that describes a subclass of BaseRobot called ```ArmBot```. An ```ArmBot```
@@ -113,8 +111,8 @@ can do all the things that BaseRobot can do, but with these differences:
 
 * ```__init__```: In the init method it should call the init of the BaseRobot class using super, but also set a value for 
 its arm position, ```self.arm_position``` to be zero. It also sets a value for the claw indicating that the claw is closed.
-do this by setting ```self.claw``` to ```False```.
+do this by setting ```self.claw_open``` to ```False```.
 * ```move_arm```: This method takes in a number and increases the arm_position by that amount.
-* ```grab_claw```: This method sets the value of ```self.claw``` to be ```False```.
-*  ```release_claw```: This method sets the value of ```self.claw``` to be ```True```.
+* ```grab_claw```: This method sets the value of ```self.claw_open``` to be ```False```.
+*  ```release_claw```: This method sets the value of ```self.claw_open``` to be ```True```.
 * ```__str___```: Reports the position of the robot and status of the arm and the claw.

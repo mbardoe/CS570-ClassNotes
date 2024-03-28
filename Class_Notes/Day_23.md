@@ -14,7 +14,8 @@ We will add a decorator to the top...
         (10, 20, 15),
         (-3, 3, 0)
 ), )
-def test_averageDistanceMeter(drivetrain: Drivetrain, monkeypatch: MonkeyPatch, left_Distance, right_Distance,
+def test_averageDistanceMeter(drivetrain: Drivetrain, \
+                              monkeypatch: MonkeyPatch, left_Distance, right_Distance,
                               output) -> None:
     # Setup
     def mock_getRightDistanceMeter(self):
@@ -23,8 +24,10 @@ def test_averageDistanceMeter(drivetrain: Drivetrain, monkeypatch: MonkeyPatch, 
     def mock_getLeftDistanceMeter(self):
         return right_Distance
 
-    monkeypatch.setattr(Drivetrain, "getLeftDistanceMeter", mock_getRightDistanceMeter)
-    monkeypatch.setattr(Drivetrain, "getRightDistanceMeter", mock_getLeftDistanceMeter)
+    monkeypatch.setattr(Drivetrain, "getLeftDistanceMeter", \
+                        mock_getRightDistanceMeter)
+    monkeypatch.setattr(Drivetrain, "getRightDistanceMeter",\
+                        mock_getLeftDistanceMeter)
     # Action
 
     dist = drivetrain.averageDistanceMeter()
@@ -60,9 +63,11 @@ class DriveStraight:
 
     def __init__(self, drivetrain, goal_in_meters):
         self.drivetrain = drivetrain
-        self.distance_controller = PIDController(self.distance_kp, self.distance_ki, self.distance_kd)
+        self.distance_controller = PIDController(self.distance_kp, \
+                                                 self.distance_ki, self.distance_kd)
         self.distance_controller.setSetpoint(goal_in_meters)
-        self.direction_controller = PIDController(self.direction_kp, self.direction_ki, self.direction_kd)
+        self.direction_controller = PIDController(self.direction_kp,\
+                                                  self.direction_ki, self.direction_kd)
         self.direction_controller.setSetpoint(0)
 
     def run(self):
@@ -105,9 +110,11 @@ class DriveStraight:
 
     def __init__(self, drivetrain, goal_in_meters):
         self.drivetrain = drivetrain
-        self.distance_controller = PIDController(self.distance_kp, self.distance_ki, self.distance_kd)
+        self.distance_controller = PIDController(self.distance_kp, \
+                                                 self.distance_ki, self.distance_kd)
         self.distance_controller.setSetpoint(goal_in_meters)
-        self.direction_controller = PIDController(self.direction_kp, self.direction_ki, self.direction_kd)
+        self.direction_controller = PIDController(self.direction_kp, \
+                                                  self.direction_ki, self.direction_kd)
         self.direction_controller.setSetpoint(0)
         self.direction_controller.setTolerance(.03)
 
@@ -127,7 +134,8 @@ class DriveStraight:
         rotate = self.direction_controller.calculate(difference)
         forward = self.distance_controller.calculate(distance)
         print(
-            f"Fwd: {forward}, Rot: {rotate}  distance:{self.drivetrain.averageDistanceMeter()} "
+            f"Fwd: {forward}, Rot: {rotate}  " +
+            "distance:{self.drivetrain.averageDistanceMeter()} "
             + f"difference:{difference}"
         )
         return rotate, forward
@@ -164,13 +172,15 @@ def drivetrain() -> Drivetrain:
     return drive
 
 
-@pytest.mark.parametrize(('left_Distance', 'right_Distance', 'direction_output', 'distance_output'), (
+@pytest.mark.parametrize(('left_Distance', 'right_Distance', \
+                          'direction_output', 'distance_output'), (
         (1.5, 1.4, False, True),
         (2.2, 2.3, True, False),
         (2, 2, False, False)
 ), )
-def test_calculate(drivetrain: Drivetrain, monkeypatch: MonkeyPatch, left_Distance, right_Distance, \
-                   direction_output, distance_output) -> None:
+def test_calculate(drivetrain: Drivetrain, monkeypatch: MonkeyPatch,\
+                   left_Distance, right_Distance, direction_output, \
+                   distance_output) -> None:
     # Setup
     autoroutine = DriveStraight(drivetrain, 2)
 
@@ -180,8 +190,10 @@ def test_calculate(drivetrain: Drivetrain, monkeypatch: MonkeyPatch, left_Distan
     def mock_getLeftDistanceMeter(self):
         return right_Distance
 
-    monkeypatch.setattr(Drivetrain, "getLeftDistanceMeter", mock_getRightDistanceMeter)
-    monkeypatch.setattr(Drivetrain, "getRightDistanceMeter", mock_getLeftDistanceMeter)
+    monkeypatch.setattr(Drivetrain, "getLeftDistanceMeter",\
+                        mock_getRightDistanceMeter)
+    monkeypatch.setattr(Drivetrain, "getRightDistanceMeter",\
+                        mock_getLeftDistanceMeter)
 
     # Action
     rotate, forward = autoroutine.calculate()
@@ -197,8 +209,8 @@ def test_calculate(drivetrain: Drivetrain, monkeypatch: MonkeyPatch, left_Distan
         (2, 2, True),
         (2.01, 1.99, True)
 ), )
-def test_run_setpoint(drivetrain: Drivetrain, monkeypatch: MonkeyPatch, left_Distance, right_Distance, \
-                      at_Setpoint) -> None:
+def test_run_setpoint(drivetrain: Drivetrain, monkeypatch: MonkeyPatch,\
+                      left_Distance, right_Distance, at_Setpoint) -> None:
     # Setup
     autoroutine = DriveStraight(drivetrain, 2)
 
@@ -208,8 +220,10 @@ def test_run_setpoint(drivetrain: Drivetrain, monkeypatch: MonkeyPatch, left_Dis
     def mock_getLeftDistanceMeter(self):
         return right_Distance
 
-    monkeypatch.setattr(Drivetrain, "getLeftDistanceMeter", mock_getRightDistanceMeter)
-    monkeypatch.setattr(Drivetrain, "getRightDistanceMeter", mock_getLeftDistanceMeter)
+    monkeypatch.setattr(Drivetrain, "getLeftDistanceMeter",\
+                        mock_getRightDistanceMeter)
+    monkeypatch.setattr(Drivetrain, "getRightDistanceMeter",\
+                        mock_getLeftDistanceMeter)
 
     # Action
     autoroutine.run()
@@ -261,7 +275,8 @@ class ClimbRamp(AutoRoutine):
             self.drivetrain.arcadeDrive(0, 0)
 
     def drive_straight(self):
-        error = self.drivetrain.getLeftEncoderCount() - self.drivetrain.getRightEncoderCount()
+        error = self.drivetrain.getLeftEncoderCount() - \
+                self.drivetrain.getRightEncoderCount()
         rotate = self.direction_controller.calculate(error)
         at_set_point = self.direction_controller.atSetpoint()
 
