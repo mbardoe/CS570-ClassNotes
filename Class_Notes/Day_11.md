@@ -1,5 +1,5 @@
 [comment]: render
-# Day 10 CS570
+# Day 12 CS570
 ## Test on Git/GitHub/OOP/TimedRobot
 
 **Name:** __________________________________________________________
@@ -11,23 +11,26 @@
 1. (6 points) Your robot is working well, but it doesn't have a climber. The code is checked and working, and is all consolidated
 on the ```main``` branch of the git repository. How would you use git to add new code to your repository? 
 
+\
 
-<div style="page-break-after: always;">
-\pagebreak 
-</div>
+\
+
+\
+
+\
 
 2. (14 points) Write a class ```Climber``` class in python with following requirements (you don't have to worry about imports):
 
-    * The Climber class initializers takes in two arguments: the first is the cancoder id of the motor that runs the climbing 
+    * The Climber class ```__init__``` takes in two arguments (beyond the required ```self```: the first is the cancoder 
+      id of the motor that runs the climbing 
       action. The second is an id number for the pneumatic actuator (solenoid) that releases the climber.
     * Instantiate a ```Motor``` class using as an input the cancoder id that was given in the initialization.
     * Instantiate  a ```Solenoid``` using as an input the id that was given in the initialization. Then make sure the Solenoid
       is engaged by using the ```set``` method of the Solenoid and passing in the value ```True```.
-    * The class has a ```release``` method that releases the climber. 
+    * The class has a ```release``` method that releases the climber, which uses the ```set``` method of the ```Solenoid```
+        and passes in the value ```False```.
     * The class has a ```climb``` method that uses the ```Motor```'s ```run``` method passing in the value 1.
-    * Make it possible to print the ```Climber``` class to the console and report if it is deployed  
-      and the speed that the motor is set to by using the Motor's ```get_speed``` method.
-
+    
 <div style="page-break-after: always;">
 \pagebreak 
 </div>
@@ -35,61 +38,17 @@ on the ```main``` branch of the git repository. How would you use git to add new
 3. (10 points) The ```TimedRobot``` class of ```wpilib``` has a method  called ```teleopPeriodic```. Describe what 
 elements of the robot's code should be in this method.
 
-<div style="page-break-after: always;">
-\pagebreak 
-</div>
+\
 
+\
 
-4. (14 points) You are writing code for a robot, and have made a class for an ```Arm``` that your robot has. The code is in a
-file called ```arm.py```. The arm can ```tilt``` and 
-like the arm on the 7407 robot ```extend```.  The ```tilt``` method takes a number of degrees from 0 to 90 and tilts the 
-arm from vertical that amount. The ```extend``` method takes a number from 0 to 1 and extends the arm based on the number.
-Full extension is 1 and completely pulled in is 0.
-You want to use this class to make the arm be tilted 45 degrees at the start of teleop. And you want to make sure the arm is fully extended at the start of autonomous. Add code below (including any necessary imports) to 
-achieve those goals.
+\
 
-```python
-import os
+\
 
-
-
-
-import wpilib
-from wpilib import TimedRobot
-
-class MyRobot(TimedRobot):
-    """
-    Our default robot class, pass it to wpilib.run
-    """
-
-
-    def robotInit(self) -> None:
-        
-
-        
- 
-    def autonomousInit(self) -> None:
-        
-
-                 
-
-    def teleopInit(self) -> None:
-       
-
-
-    def teleopPeriodic(self) -> None:
-
-
-       
-       
-if __name__ == "__main__":
-    # If your ROMI isn't at the default address, set that here
-    os.environ["HALSIMWS_HOST"] = "10.0.0.2"
-    os.environ["HALSIMWS_PORT"] = "3300"
-
-    wpilib.run(MyRobot)
-
-```
+4. (6 points) Your teammate Dick has been working on some code to add to our competition robot. This code
+is going to help run the robot's intake. He feels that he is done, so he merged his changes into the main branch.
+Did Dick do the right thing? Why or why not? If he did not do the right thing, what should he have done?
 
 <div style="page-break-after: always;">
 \pagebreak 
@@ -102,10 +61,10 @@ if __name__ == "__main__":
 ```python
 import os
 
-import ______________
+
 from ___________ import TimedRobot, ___________, ___________
 from wpilib.drive import ___________
-from autonomous.controller import AutoControl
+from autonomousController import AutoControl
 
 
 class Zee_Robot(TimedRobot):
@@ -143,44 +102,23 @@ class Zee_Robot(TimedRobot):
            rotate=__________________.getRawAxis(1)
            self.drivetrain.arcadeDrive(rotate, ___________________)
 
-
-if __name__ == "__main__":
-# If your ROMI isn't at the default address, set that here
-    os.environ["HALSIMWS_HOST"] = "10.0.0.2"
-    os.environ["HALSIMWS_PORT"] = "3300"
-    wpilib.run(______________________)
-
-
-
-
-
 ```
+6. (6 points) 
+
+Kendra is considering making a change to the base code that has run the intake for the last several seasons, 
+because they want to add some further functionality to the intake. How could Kendra use sublclassing to make 
+the job of writing new intake code easier. 
 
 
-<div style="page-break-after: always;">
-\pagebreak 
-</div>
+\
 
+\
 
+\
 
+\
 
-
-
-
-6. (6 points) Explain why it is important that all FRC robots are subclasses of some kind of robot that is described in ```wpilib```. 
-How do inheritance and polymorphism help make robot competitions work?
-
-
-
-
-<div style="page-break-after: always;">
-\pagebreak 
-</div>
-
-
-
-
-7. (12 points) Bob has written the code below. Please identify at least 3 mistakes in the code:
+7. (9 points) Bob has written the code below. Please identify at least 3 mistakes in the code:
 
 ```python
 import wpilib from Spark, Solenoid
@@ -200,12 +138,16 @@ class Intake:
        solenoid.set(False)
        
     def run(self):
-       motor.set_speed(1)
+       self.motor.set_speed=1
        
        
 
 ```
 
+\
+
+8. (6 points) You have a teammate, Muma, that wants to write all the code to run the robot in one file. 
+What are some reasons that this is a suboptimal idea? 
 
 
 

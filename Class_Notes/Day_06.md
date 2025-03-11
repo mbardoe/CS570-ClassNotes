@@ -2,6 +2,31 @@
 # Day 06 CS570
 ## Starting to program a Robot
 
+Let's install some libraries... Start a new project called **First_ROMI**. Then go to the *View Menu > Tool Windows > Terminal*.
+Terminal is a place where you can give commands to the computer. In PyCharm, each project is contained within what is called 
+a *Virtual Environment* which means that libraries are only accessible within that particular project. This is helpful because
+sometimes libraries have overlaps and interactions which are not good, and this allows you to control what libraries are 
+part of any python project you are making. 
+
+On a mac, in terminal do the following commands one at a time:
+
+```commandline
+python3 -m pip install robotpy
+```
+
+If you have another type of operating system please look at the instructions 
+[here](https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-2/python-setup.html).
+
+We will need to initialize a robotpy project. This is done by the following command:
+
+```commandline
+python3 -m robotpy init
+```
+
+Once this is done you have the code on your computer necessary to build our first ROMI robot code. We will start that 
+next class...
+
+
 ### Starting to code a Robot
 
 Now that we have access to the ```wpilib``` libraries we can start to write code to make our robot move. Let's discuss 
@@ -153,17 +178,12 @@ in from ```wpilib```.
 
 #### Make it runnable
 
-We have one last thing to do before we test out our robot. Because ```robot.py``` is the file that the FRC software runs 
-we have to make it runnable. This means that we need a declaration at the bottom that says if this is the main file to 
-do something. Put this out at the bottom of your file and make sure it is not indented at all. 
+The ROMI runs in the simulator. So to make it run in reality we have to make 
+a connection between the simulator and the ROMI. This is done by the following command:
 
 ```python
-if __name__ == "__main__":
-    # If your ROMI isn't at the default address, set that here
-    os.environ["HALSIMWS_HOST"] = "10.0.0.2"
-    os.environ["HALSIMWS_PORT"] = "3300"
-
-    wpilib.run(MyRobot)
+os.environ["HALSIMWS_HOST"] = "10.0.0.2"
+os.environ["HALSIMWS_PORT"] = "3300"
 ```
 
 There are some more imports necessary for these commands. The ```os``` library is a standard python library that connects
@@ -191,10 +211,10 @@ Open a terminal window *View > Tool Windows > Terminal*.
 In the terminal write:
 
 ```commandline
-python robot.py sim --ws-client
+python -m robotpy sim --ws-client
 ```
 This should load the code you have written to the ROMI and start a window that looks like this
-![image of simulator](../img/Simulator1.png) 
+![image of simulator](img/Simulator1.png) 
 
 If there is nothing listed under **Joystick[0]** drag **Keyboard 1** over and drop in that area. Change the robot status
 to **Teleoperated** and you should be able to drive your ROMI with the *s* and *w* keys to go forward and back and the 
@@ -208,5 +228,24 @@ Watch this [video](https://youtu.be/m_MQYyJpIjg) about Object-Oriented Programmi
 * Describe ways that encapsulation is helpful in writing robot code.
 * Give an example of polymorphism in the robot code that we wrote today. 
 
+### Next Steps
+
+#### Test your ROMI code
+
+Get a partner and a ROMI and see if you can get a ROMI to move.
+
+**Show me your robot moving before you leave class today.**
+
+
+#### Refactor the Drivetrain
+
+While it is nice that the drivetrain is all within the robot.py file, it would be better if the drivetrain was in its own file.
+This will allow us to do more interesting things with the robot later. 
+
+So create a new file called ```drivetrain.py``` and move the drivetrain code into that file.
+
+Then in the ```robot.py``` file import the drivetrain class and create an instance of the drivetrain class in the ```robotInit``` method.
+
+**Show me your code before you leave class today.**
 
 

@@ -6,7 +6,7 @@
 
 ### Creating a Chooser on the SmartDashboard
 
-### Making a PI-controller
+### Making a PD-controller
 
 ### Making a Protocol
 
