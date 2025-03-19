@@ -1,5 +1,5 @@
 [comment]: render
-# Day 12 CS570 
+# Day 10 CS570 
 ## Encoders and Gyros
 
 ### Encoders

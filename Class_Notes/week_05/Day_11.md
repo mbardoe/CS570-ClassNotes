@@ -1,5 +1,5 @@
 [comment]: render
-# Day 14 CS570
+# Day 11 CS570
 ## DriveStraight Command
 
 ### Goal
