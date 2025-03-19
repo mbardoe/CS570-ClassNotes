@@ -1,5 +1,5 @@
 [comment]: render
-# Day 9 First ROMI Project
+# Day 7 First ROMI Project
 ## A ROMI line follower
 
 ### Project Overview
@@ -23,7 +23,7 @@ the setup of the ROMI.
 After you have made the ROMI writable scroll down to find the settings of the GPIO interfaces. Change the second of these
 to DIO so that you can use both line sensors. 
 
-![Change settings](img/romi-ui-io-config.jpg)
+![Change settings](../img/romi-ui-io-config.jpg)
 
 
 ### Tips on installing the Sensors

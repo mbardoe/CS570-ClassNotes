@@ -1,5 +1,5 @@
 [comment]: render
-# Day 12 CS570
+# Day 9 CS570
 ## Test on Git/GitHub/OOP/TimedRobot
 
 **Name:** __________________________________________________________

@@ -1,4 +1,4 @@
-[comment]: render
+
 # Day 3 Class Notes
 ## More with Git and GitHub
 

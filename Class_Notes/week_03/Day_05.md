@@ -1,5 +1,5 @@
 [comment]: render
-# Day 05
+# Day 5
 
 ## Merging branches
 

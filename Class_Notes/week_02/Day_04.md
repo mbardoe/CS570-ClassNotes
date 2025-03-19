@@ -23,7 +23,6 @@ code:
 ```python
 
 import ntcore
-from wpilib import DigitalInput
 
 import config
 import constants

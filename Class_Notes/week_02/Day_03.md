@@ -1,4 +1,7 @@
-### Python and Object Oriented Programming
+[comment]: render
+# Day 3 
+## Python and Object Oriented Programming
+
 
 Some key ideas:
 
@@ -8,13 +11,13 @@ described in the class.
 * properties - pieces of data that are associated with an object (nouns/adjectives)
 * methods - functions and procedures that an object can run (verbs)
 
-#### The Point of OOP
+### The Point of OOP
 
 The point of OOP is that when you are writing programs for the real world it is often helpful to be able to model the world
 in the code that you write. It is helpful for us, as programmers of a robot to be able to have code that reflects that 
 robot that we have. 
 
-#### Creating classes
+### Creating classes
 
 You create a class by using the following declaration:
 
@@ -38,7 +41,7 @@ my_object.my_cool_method() # This makes that object do its cool method
 ```
 
 
-#### How to import
+### How to import
 
 Another very important point about OOP is that it allows abstraction. When other people make classes we only need to know
 what they do (methods) and what information they track (properties). We don't necessarily need to know how the code works.
@@ -57,13 +60,13 @@ my_motor.set_speed(1)
 So to program a robot, it often isn't so much about programming or coming up with great algorithms. The first task is 
 to become familiar and proficient with the libraries and classes that others have made to make the robot work.
 
-#### __init__ method
+### __init__ method
 
 In Python, whenever a object is instantiated.  is made it runs a special method called ```__init__```. This gives an 
 opportunity for important properties to get set. When you make a class, you will most often need to make this method 
 and set the appropriate properties. 
 
-#### ```self``` keyword
+### ```self``` keyword
 
 The ```self``` keyword is a way for python to refer to an object before it actually exists. In a class, we don't know 
 the variable name for an object because it doesn't exist yet. We use ```self``` to indicate the object that we will make 
@@ -71,7 +74,7 @@ later. Every property needs to be made using the ```self``` keyword. This makes 
 be available throughout the all the methods of the class) throughout all the methods of the class.
 
 
-#### Practice
+### Practice
 
 Let's make sure that all this makes sense. 
 

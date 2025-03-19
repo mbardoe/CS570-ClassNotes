@@ -1,5 +1,5 @@
 [comment]: render
-# Day 06 CS570
+# Day 6 CS570
 ## Starting to program a Robot
 
 Let's install some libraries... Start a new project called **First_ROMI**. Then go to the *View Menu > Tool Windows > Terminal*.

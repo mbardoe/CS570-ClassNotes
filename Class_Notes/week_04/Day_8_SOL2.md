@@ -1,6 +1,6 @@
 [comment]: render
-# Day 10 CS570
-## Test Review on Git/GitHub/OOP/TimedRobot
+# Day 8 Solutions CS570
+## Test Review Solutions on Git/GitHub/OOP/TimedRobot
 
 
 1. Describe the purpose of a *branch* in git. What is the goal of a *main* branch?
