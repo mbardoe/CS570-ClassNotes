@@ -35,6 +35,7 @@ and the GitHub classroom will come once we are sure that we all have accounts.
 * Introduce students to the ```wpilib```  and ```robotpy``` libraries to help them program frc robots
 * Increase students facility with python and object-oriented programming
 * Introduce students to the process of unit testing software
+* Introduce students to control theory about how robots achieve goals states
 * Increase students facility on working in teams to develop software
 
 ## Grading

@@ -214,7 +214,7 @@ In the terminal write:
 python -m robotpy sim --ws-client
 ```
 This should load the code you have written to the ROMI and start a window that looks like this
-![image of simulator](img/Simulator1.png) 
+![image of simulator](../img/Simulator1.png) 
 
 If there is nothing listed under **Joystick[0]** drag **Keyboard 1** over and drop in that area. Change the robot status
 to **Teleoperated** and you should be able to drive your ROMI with the *s* and *w* keys to go forward and back and the 
