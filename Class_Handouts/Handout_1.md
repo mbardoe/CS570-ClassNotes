@@ -65,5 +65,5 @@ Go to PyCharm and Start a new project called 'CS570_Day_1'
 
 ## Homework
 
-
+Please complete the survey at https://forms.gle/mwzUyEZP4PGu6ysF9
 
