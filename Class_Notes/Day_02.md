@@ -72,8 +72,8 @@ into the main branch.
 #### Homework
 
 Your homework is to sign up for GitHub Classroom and to do the assignment called 
-```CS570-Assignment-Branching```. This is a simple assignment that will help you get used to the process 
-of making branches and commits.
+```CS570-RobotMath```. This is a simple assignment that will help you get used to the process 
+of writing code and committing and pushing to a repo.
 
 
 

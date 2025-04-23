@@ -35,18 +35,8 @@ on the ```main``` branch of the git repository. How would you use git to add new
 \pagebreak 
 </div>
 
-3. (10 points) The ```TimedRobot``` class of ```wpilib``` has a method  called ```teleopPeriodic```. Describe what 
-elements of the robot's code should be in this method.
 
-\
-
-\
-
-\
-
-\
-
-4. (6 points) Your teammate Dick has been working on some code to add to our competition robot. This code
+3. (6 points) Your teammate Dick has been working on some code to add to our competition robot. This code
 is going to help run the robot's intake. He feels that he is done, so he merged his changes into the main branch.
 Did Dick do the right thing? Why or why not? If he did not do the right thing, what should he have done?
 
@@ -58,51 +48,7 @@ Did Dick do the right thing? Why or why not? If he did not do the right thing, w
 5. (12 points) Fill in the blanks.
 
 
-```python
-import os
 
-
-from ___________ import TimedRobot, ___________, ___________
-from wpilib.drive import ___________
-from autonomousController import AutoControl
-
-
-class Zee_Robot(TimedRobot):
-
-       def robotInit(self):
-           '''This method is called as the robot turns on and is often used to 
-           set up the joysticks and other presets.'''
-           self.controller=______________(0)
-           self.left_motor=Spark(0)
-           self.right_motor=Spark(1)
-           self.drivetrain=DifferentialDrive(_______________, __________________)
-           self.autocontrol=AutoControl(self.drivetrain)
-   
-       def robotPeriodic(self):
-           '''This is called every cycle of the code. In general the code is loop
-                    through every .02 seconds.'''
-   
-           pass
-   
-       def autonomousInit(self):
-           '''This is called once when the robot enters autonomous mode.'''
-           pass
-   
-       def autonomousPeriodic(self):
-           '''This is called every cycle while the robot is in autonomous.'''
-           _______._____________.run()
-   
-       def teleopInit(self):
-           '''This is called once at the start of Teleop.'''
-           pass
-   
-       def teleopPeriodic(self):
-           '''This is called once every cycle during Teleop'''
-           forward=_________________.getRawAxis(0)
-           rotate=__________________.getRawAxis(1)
-           self.drivetrain.arcadeDrive(rotate, ___________________)
-
-```
 6. (6 points) 
 
 Kendra is considering making a change to the base code that has run the intake for the last several seasons, 

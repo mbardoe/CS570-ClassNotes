@@ -1,5 +1,5 @@
 [comment]: render
-# Day 6 CS570
+# Day 8 CS570
 ## Starting to program a Robot
 
 Let's install some libraries... Start a new project called **First_ROMI**. Then go to the *View Menu > Tool Windows > Terminal*.
@@ -26,7 +26,49 @@ python3 -m robotpy init
 Once this is done you have the code on your computer necessary to build our first ROMI robot code. We will start that 
 next class...
 
+### Sync Needed Libraries
 
+In the `pyproject.toml` file you will see a list of possible libraries that you can use with an robotpy project. 
+Be sure to uncomment the line that says `romi` and `sync`.
+
+```python
+#
+# Use this configuration file to control what RobotPy packages are installed
+# on your RoboRIO
+#
+
+[tool.robotpy]
+
+# Version of robotpy this project depends on
+robotpy_version = "2025.3.2.0"
+
+# Which extra RobotPy components should be installed
+# -> equivalent to `pip install robotpy[extra1, ...]
+robotpy_extras = [
+    # "all",
+    # "apriltag",
+    # "commands2",
+    # "cscore",
+    # "navx",
+    # "pathplannerlib",
+    # "phoenix5",
+    # "phoenix6",
+    # "rev",
+    "romi", # This line HERE
+    "sim", # And this one TOO
+    # "xrp",
+]
+
+# Other pip packages to install
+requires = []
+
+```
+
+After this you need to `sync` the newly installed python libraries.
+
+```python
+python3 -m robotpy sync
+```
 ### Starting to code a Robot
 
 Now that we have access to the ```wpilib``` libraries we can start to write code to make our robot move. Let's discuss 
@@ -186,6 +228,8 @@ os.environ["HALSIMWS_HOST"] = "10.0.0.2"
 os.environ["HALSIMWS_PORT"] = "3300"
 ```
 
+Place these lines right after your imports and before declaring your robot class.
+
 There are some more imports necessary for these commands. The ```os``` library is a standard python library that connects
 to the operating system, and we are going to need to import the wpilib library too. Your imports should now look like:
 
@@ -211,10 +255,10 @@ Open a terminal window *View > Tool Windows > Terminal*.
 In the terminal write:
 
 ```commandline
-python -m robotpy sim --ws-client
+python3 -m robotpy sim --ws-client
 ```
 This should load the code you have written to the ROMI and start a window that looks like this
-![image of simulator](../img/Simulator1.png) 
+![image of simulator](./img/Simulator1.png) 
 
 If there is nothing listed under **Joystick[0]** drag **Keyboard 1** over and drop in that area. Change the robot status
 to **Teleoperated** and you should be able to drive your ROMI with the *s* and *w* keys to go forward and back and the 

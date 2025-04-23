@@ -1,5 +1,5 @@
 [comment]: render
-# Day 5
+# Day 5B
 
 ## Merging branches
 
@@ -42,11 +42,14 @@ Here is an example. Let's say I build a robot class, in a file called ```robot.p
 
 class Robot:
 
-    def move(self, x, y):
+    def move(self, x:float, y:float):
         pass
 
-    def beep(self):
+    def beep(self)->None:
         pass
+
+    def __str__(self)->str:
+        return "I'm a robot!"
 ```
 
 It isn't much of a robot. It is really just a drivetrain and a something that goes beep, but it is mine and I made it. 
@@ -59,10 +62,10 @@ from robot import Robot
 
 class ArmBot(Robot):
 
-    def __init__(self):
+    def __init__(self, name:str):
         super().__init__()
 
-    def rotate_arm(self, degrees):
+    def rotate_arm(self, degrees)->None:
         pass
 
     def grab_claw(self):
